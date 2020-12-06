@@ -25,7 +25,7 @@ class DoEmulate implements Runnable
      {
       serialRead();
       try {
-        Thread.sleep(5);
+        Thread.sleep(1);
       }catch(java.lang.InterruptedException e){
         print("DoEmulate threw up\n");
       }
@@ -117,51 +117,53 @@ void serialRead() {
     switch(recvout) {
       //  NES controller pad 1
     case 'U':
-      VKey.keyPress(KeyEvent.VK_U); 
+      VKey.keyPress(KeyEvent.VK_UP); 
       break;
       
     case '2':
-      VKey.keyRelease(KeyEvent.VK_U);
+      VKey.keyRelease(KeyEvent.VK_UP);
       break;
       
     case 'D': 
-      VKey.keyPress(KeyEvent.VK_D); 
+      VKey.keyPress(KeyEvent.VK_DOWN); 
       break;
       
     case '3':
-      VKey.keyRelease(KeyEvent.VK_D);
+      VKey.keyRelease(KeyEvent.VK_DOWN);
       break;
       
     case 'L': 
-      VKey.keyPress(KeyEvent.VK_L); 
+      VKey.keyPress(KeyEvent.VK_LEFT); 
       break;
       
     case '4':
-      VKey.keyRelease(KeyEvent.VK_L);
+      VKey.keyRelease(KeyEvent.VK_LEFT);
       break;
       
     case 'R': 
-      VKey.keyPress(KeyEvent.VK_R);
+      VKey.keyPress(KeyEvent.VK_RIGHT);
       break; 
       
     case '5':
-      VKey.keyRelease(KeyEvent.VK_R);
+      VKey.keyRelease(KeyEvent.VK_RIGHT);
       break;
       
     case 'E':
-      VKey.keyPress(KeyEvent.VK_E);
+      //VKey.keyPress(KeyEvent.VK_E);
+      VKey.keyPress(KeyEvent.VK_ESCAPE);
       break; 
       
     case '7':
-      VKey.keyRelease(KeyEvent.VK_E);
+      //VKey.keyRelease(KeyEvent.VK_E);
+      VKey.keyRelease(KeyEvent.VK_ESCAPE);
       break;
       
     case 'S': 
-      VKey.keyPress(KeyEvent.VK_S);
+      VKey.keyPress(KeyEvent.VK_ENTER);
       break; 
       
     case '6':
-      VKey.keyRelease(KeyEvent.VK_S);
+      VKey.keyRelease(KeyEvent.VK_ENTER);
       break;
       
     case 'B': 
